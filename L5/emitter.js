@@ -1,8 +1,8 @@
-//Events -- on, emit
-//emit is used to trigger an event · on is used to add a callback function that's going to be executed when the event is triggered.
+//! Events -- on, emit
+//! emit is used to trigger an event · on is used to add a callback function that's going to be executed when the event is triggered.
 
 function Emitter() {
-  this.events = {}; //an empty events object in Emitter function
+  this.events = {}; //! an empty events object in Emitter function
 }
 
 Emitter.prototype.on = function (type, listener) {

@@ -5,3 +5,8 @@ across all node application. and called by CommonJS require(path) ,
 module.export = fxnName, if you passs nothing in moduke then it will return an
 empty object emit is used to trigger an event · on is used to add a callback
 function that's going to be executed when the event is triggered.
+
+
+type node in command and now u r in node environment
+u will reach to node repl(read eval(evaluate) print loop) and u can write js code here.
+
