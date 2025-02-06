@@ -1,7 +1,7 @@
 //! import EventEmitter class
 const EventEmitter = require("events");
 
-//! create an object of EventEmitter class
+//* create an object of EventEmitter class
 const emitter = new EventEmitter();
 
 //! define an event listener (addListener)
@@ -17,7 +17,7 @@ emitter.on("event", (userName) => {
 });
 emitter.emit("event", "Aniket_chauahan");
 
-//! obj as a parameter
+//? obj as a parameter
 emitter.on("obj", (object) => {
   console.log(
     `Hello ${object.name}, you are a ${object.prof} and you are ${object.age} years old`
