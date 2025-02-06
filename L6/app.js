@@ -1,6 +1,9 @@
 //! FS module
 
 const fs = require("fs");
+const path = require("path");
+
+//const filepath = path.join(__dirname, __filename);
 
 //! reading file
 //! Asynchronous(non blocking) --> run at last
@@ -11,10 +14,6 @@ fs.readFile("./input.txt", "utf-8", (err, data) => {
   console.log(data);
 });
 
-//! Synchronous(blocking) --> run first
-const result = fs.readFileSync("./input.txt", "utf-8");
-console.log(result);
-
 //! Writting file
 
 fs.writeFile("./input.txt", "Hello World", (err) => {
@@ -23,6 +22,15 @@ fs.writeFile("./input.txt", "Hello World", (err) => {
   }
   // console.log("File has been written");
 });
+
+//! renames file
+const newUpdatedFileName = "newInput.txt";
+const newFilePath = path.join(__dirname, newUpdatedFileName);
+fs.renameSync("./input.txt", newFilePath);
+
+//! Synchronous(blocking) --> run first
+const result = fs.readFileSync("./input.txt", "utf-8");
+console.log(result);
 
 //! Append file -->adding new texts
 

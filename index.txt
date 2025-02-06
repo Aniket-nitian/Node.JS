@@ -7,6 +7,9 @@ empty object emit is used to trigger an event · on is used to add a callback
 function that's going to be executed when the event is triggered.
 
 
-type node in command and now u r in node environment
+type node in command and now u r in node environment(world)
 u will reach to node repl(read eval(evaluate) print loop) and u can write js code here.
+In node --window and document is not available because it is not a browser. but global is present
 
+react--component,
+node--module.
