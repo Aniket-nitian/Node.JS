@@ -13,3 +13,6 @@ In node --window and document is not available because it is not a browser. but 
 
 react--component,
 node--module.
+
+
+nodemon, node --watch
