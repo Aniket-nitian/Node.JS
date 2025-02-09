@@ -16,3 +16,33 @@ node--module.
 
 
 nodemon, node --watch
+
+npm view expree versions.
+
+1.0.0 --> major_versions.minor_versions.patch_versions
+
+npm install express@1.0.0
+npm install express@1.0.0 --save-exact
+npm install express@^1.0.0
+npm install express@~1.0.0
+npm install express@latest
+npm install express@next
+
+npm outdated <package_name>
+npm update <package_name>
+npm remove <package_name>
+
+npx npm-check-updates -u
+
+//! global install
+
+npm i -g nodemon
+npm i -g nodemon@latest
+
+//! local install
+
+npm i nodemon
+npm i nodemon@latest
+
+v8 --> handle sync code and convert it into machine code.
+Libuv(C library)--> handle async code and convert it into machine code. provides eventloop and thread pool.
