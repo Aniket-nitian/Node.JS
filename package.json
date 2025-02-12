@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "description": "\"# Node.JS\"",
   "main": "index.js",
-  "type":"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Aniket-nitian/Node.JS/issues"
   },
-  "homepage": "https://github.com/Aniket-nitian/Node.JS#readme"
+  "homepage": "https://github.com/Aniket-nitian/Node.JS#readme",
+  "dependencies": {
+    "chalk": "^5.4.1"
+  }
 }
