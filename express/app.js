@@ -26,4 +26,7 @@ app.listen(PORT, () => {
 
 //or
 
-//! usinf file .env
+//! using file .env
+
+//echo $env:PORT  --> to see the existing port value   --> in powershell
+//Remove-Item env:PORT  --> to remove the existing port value  --> in powershell
