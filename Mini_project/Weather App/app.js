@@ -13,9 +13,7 @@ const city = async () => {
     const url = `${BASE_URL}?q=${city}&appid=${API_KEY}&units=metric`;
     try {
       const weatherData = await fetch(url);
-      // if (weatherData.ok) {
-      //   throw new Error("City not found");
-      // }
+
       const data = await weatherData.json();
       console.log(data);
       console.log("\nWeather Information: ");
