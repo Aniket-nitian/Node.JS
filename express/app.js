@@ -10,6 +10,20 @@ app.get("/about", (req, res) => {
   res.send("About page");
 });
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+//const PORT = "3000";
+//using environmental variable
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
+
+//commands
+//! $env:PORT=5000;node app.js  --> for powershell
+// or
+
+//! set PORT=5000 && node app.js  -->for command prompt
+
+//or
+
+//! usinf file .env
