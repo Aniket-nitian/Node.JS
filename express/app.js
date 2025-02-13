@@ -1,10 +1,20 @@
 import express from "express";
 import { PORT } from "./env.js";
+import path from "path";
 
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("<h1>Hello I am coming from express server</h1>");
+  //console.log(__dirname);
+  //console.log(__filename);
+  //console.log(import.meta.dirname);
+  //console.log(import.meta.url);
+
+  const __filename = new URL(import.meta.url).pathname;
+  console.log(__filename);
+
+  const homepagepath = path.join(import.meta.dirname, "public", "index.html");
+  res.sendFile(homepagepath);
 });
 
 app.get("/about", (req, res) => {
