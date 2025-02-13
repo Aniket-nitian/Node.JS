@@ -4,16 +4,22 @@ import path from "path";
 
 const app = express();
 
-//absolute path
+//* in newer version of node.js (14.8+), you can use top-level await without needing to wrap it in an async function.
+
+const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+const json = await response.json();
+console.log(json);
+
+//!absolute path
 const staticpath = path.join(import.meta.dirname, "public");
 app.use(express.static(staticpath));
 
 app.get("/", (req, res) => {
   //console.log(__dirname);
-  //console.log(__filename);
+  //console.log(__filename);  --> both are not defined in ES module
   //console.log(import.meta.dirname);
   //console.log(import.meta.url);
-
+  //! OR
   const __filename = new URL(import.meta.url).pathname;
   console.log(__filename);
 
