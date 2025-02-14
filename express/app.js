@@ -12,23 +12,23 @@ console.log(json);
 
 //!absolute path
 const staticpath = path.join(import.meta.dirname, "public");
-app.use(express.static(staticpath));
+app.use("/public", express.static(staticpath));
+
+//app.get("/", (req, res) => {
+// console.log(__dirname);
+// console.log(__filename);  --> both are not defined in ES module
+// console.log(import.meta.dirname);
+// console.log(import.meta.url);
+// OR
+//   const __filename = new URL(import.meta.url).pathname;
+//   console.log(__filename);
+
+//   const homepagepath = path.join(import.meta.dirname, "public", "index.html");
+
+//   res.sendFile(homepagepath);
+// });
 
 app.get("/", (req, res) => {
-  //console.log(__dirname);
-  //console.log(__filename);  --> both are not defined in ES module
-  //console.log(import.meta.dirname);
-  //console.log(import.meta.url);
-  //! OR
-  const __filename = new URL(import.meta.url).pathname;
-  console.log(__filename);
-
-  const homepagepath = path.join(import.meta.dirname, "public", "index.html");
-
-  res.sendFile(homepagepath);
-});
-
-app.get("/about", (req, res) => {
   res.send("About page");
 });
 
@@ -36,6 +36,7 @@ app.get("/about", (req, res) => {
 //using environmental variable
 
 //*const PORT = process.env.PORT || 5000; //taking from .env file
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

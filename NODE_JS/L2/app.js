@@ -1,5 +1,5 @@
 const hello = require("./greet.js"); //!commonJS
-//const { sub, greet } = require("./greet.js"); //!ES6
+//const { sub, greet } = require("./greet.js");
 hello.greet();
 
 //

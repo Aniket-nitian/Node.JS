@@ -11,4 +11,4 @@ const userAge = 22;
 
 const parseAge = ageSchema.parse(userAge); //checking
 
-//console.log(parseAge);
+console.log(parseAge);
