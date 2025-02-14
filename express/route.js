@@ -3,7 +3,12 @@ import express from "express";
 const app = express();
 
 app.get("/profile/:username", (req, res) => {
-  console.log(req.params);
+  // const username = req.params.username;
+  // console.log(username);
+  //* or
+  //destructuring
+  const { username } = req.params;
+  console.log(username);
   res.send("Profile page for " + req.params.username);
 });
 
