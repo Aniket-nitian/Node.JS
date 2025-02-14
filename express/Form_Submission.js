@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 import Path from "path";
 
 const app = express();
@@ -19,6 +20,15 @@ app.use(express.urlencoded({ extended: true }));
 app.post("/contact", (req, res) => {
   console.log(req.body);
   res.redirect("/");
+});
+
+//!error
+
+app.use((req, res) => {
+  // return res.status(404).send("Page not found");
+  return res
+    .status(404)
+    .sendFile(path.join(import.meta.dirname, "views", "error.html"));
 });
 
 app.listen(3000, () => {
